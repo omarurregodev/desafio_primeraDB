@@ -7,16 +7,17 @@ socket.on("productos", (data) => {
 function showProductos(data) {
     const htmlProductos = data.map((prod) => {
         return `
-        <tr><td>${prod.nombre}</td><td>$ ${prod.precio}</td><td><img src="${prod.url}" width="50" alt="not found"></td></tr>
+        <tr><td>${prod.title}</td><td>$ ${prod.price}</td><td><img src="${prod.thumbnail}" width="50" alt="not found"></td></tr>
         `
     }).join(" ")
     document.getElementById("tableBodyProd").innerHTML = htmlProductos;
 }
-function addProduct(e) {
+function addProduct() {
+    console.log("holaaa");
     const producto = {
-        nombre: document.getElementById("nombre").value,
-        precio: document.getElementById("precio").value,
-        url: document.getElementById("foto").value
+        title: document.getElementById("title").value,
+        price: document.getElementById("price").value,
+        thumbnail: document.getElementById("thumbnail").value
     };
     socket.emit("new-product", producto);
     return false;

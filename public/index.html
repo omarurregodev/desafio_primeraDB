@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio_5</title>
+    <title>Desafio_7</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src="/socket.io/socket.io.js"></script>
     <script src="js/main.js"></script>
@@ -36,21 +36,21 @@
 
             <br>
 
-            <form onsubmit="return addProduct(this)" autocomplete="off">
+            <form action="/" method="POST" autocomplete="off">
                 <div class="form-group">
                     <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" class="form-control" name="title" required>
+                    <input type="text" id="title" class="form-control" name="title" required>
                 </div>
                 <div class="form-group">
                     <label for="precio">Precio</label>
-                    <input type="number" id="precio" class="form-control" name="price" step="0.01" required>
+                    <input type="number" id="price" class="form-control" name="price" step="0.01" required>
                 </div>
                 <div class="form-group">
                     <label for="url">Foto URL</label>
-                    <input type="url" id="foto" class="form-control" name="img" required>
+                    <input type="url" id="thumbnail" class="form-control" name="thumbnail" required>
                 </div>
 
-                <input type="submit" class="btn btn-success mt-3" value="Enviar">
+                <button class="btn btn-success mt-3">Enviar</button>
             </form>
         </div>
     </div>
