@@ -3,10 +3,10 @@ const options = {
     mysql: {
         client: "mysql",
         connection: {
-            host: "localhost",
-            user: "root",
-            password: "",
-            database: "ecommerce",
+            host: '127.0.0.1',
+            user: 'root',
+            password: '',
+            database: 'ecommerce'
         },
         pool: { min: 0, max: 10 }
     },
